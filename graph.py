@@ -6,6 +6,7 @@ from nodes.executor import executor
 from nodes.observer import observer
 from langgraph.prebuilt import ToolNode
 from tools.mcp import tools
+import asyncio
 
 import logging
 
@@ -75,7 +76,6 @@ initial_state = {
     "step_retries" : 0
 }
 
-import asyncio
 
 
 async def main():

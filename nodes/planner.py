@@ -13,7 +13,7 @@ def planner(state: KeystoneState):
             Do not over-segment or create open-ended research phases.
             Operational Constraint:
             Plan only the actions necessary for Keystone to produce the requested deliverable (e.g., research, extract, draft, analyze). 
-            Do not turn recommendations, user advice, or conceptual prerequisites into execution steps unless the user explicitly told Keystone to perform them.
+            Do not turn recommendations, user advice, or conceptual prerequisites into execution steps unless the user explicitly told you to perform them.
 
             Task:
             {state['task']}

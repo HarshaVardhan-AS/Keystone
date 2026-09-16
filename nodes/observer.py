@@ -27,8 +27,8 @@ def observer(state: KeystoneState):
         3. Deliverable Completion: For synthesis, drafting, or computation objectives, mark passed = True
            if the output directly fulfills the requested deliverable using the available context.
         4. Ground Truth Priority: Trust tool evidence over your internal knowledge.
-       Never fail an agent simply because repository paths, versions, or file structures
-       revealed by tools contradict your training data or assumptions.
+           Never fail an agent simply because repository paths, versions, or file structures
+           revealed by tools contradict your training data or assumptions.
         """
     )
 
