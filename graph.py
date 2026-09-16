@@ -63,7 +63,8 @@ workflow = graph.compile()
 
 
 initial_state = {
-    "task": "Find me a good handloom(cotton) store in Hyderabad to shop at and make a travel routine for that day",
+    "task": "Inspect the GitHub repository 'pallets/flask' and determine whether the repository currently contains any open pull requests authored by the repository owner. Report the number found and list their titles. If no such pull requests exist, explicitly state that none were found based on the GitHub tool results.",
+    #test task
     "plan": "",
     "result": "",
     "status": "",

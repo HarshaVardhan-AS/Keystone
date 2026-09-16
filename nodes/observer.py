@@ -16,11 +16,19 @@ def observer(state: KeystoneState):
         Result:
         {result}
         Evaluation Rules:
-        1. If the objective requires locating or extracting information from a specific target,
-           and the agent definitively proves that the target does not exist or is not configured,
-           this counts as SUCCESS (passed = True).
-        2. Only mark passed = False if the agent guessed, gave up without checking tools,
-           produced hallucinated evidence, or failed to perform the requested verification.
+        1. Valid Negative Proof: If the objective requires finding, verifying, or configuring a target,
+           and the agent demonstrates via tool evidence that the target does not exist, is missing,
+           or is unavailable, mark passed = True.
+        
+        2. Grounding & Rigor: Mark passed = False when the agent guessed, hallucinated evidence,
+           claimed actions it did not actually perform, or failed to address the core requirements
+           of the objective.
+        
+        3. Deliverable Completion: For synthesis, drafting, or computation objectives, mark passed = True
+           if the output directly fulfills the requested deliverable using the available context.
+        4. Ground Truth Priority: Trust tool evidence over your internal knowledge.
+       Never fail an agent simply because repository paths, versions, or file structures
+       revealed by tools contradict your training data or assumptions.
         """
     )
 

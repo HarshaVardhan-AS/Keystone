@@ -35,7 +35,12 @@ def executor(state: KeystoneState):
         Guidelines:
         - Use at most 2 targeted searches for this step.
         - Do not repeat searches for information you already have.
-        - Once you have sufficient information, synthesize the result and stop using tools."""
+        - Once you have sufficient information, synthesize the result and stop using tools.
+        - Only claim actions or outcomes that are supported by tool results or information
+          available in the conversation.
+        - Do not present an intended, suggested, or hypothetical action as completed.
+        - If the available tools cannot perform or verify a requested action, state that
+          limitation rather than assuming the action was completed."""
         )
         messages.append(prompt)
         new_messages.append(prompt)
